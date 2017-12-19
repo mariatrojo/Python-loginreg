@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Users Show</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'semi_restful/style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<h1>User {{ users.id }}</h1>
+	<p>Full Name: {{ users.first_name}} {{ users.last_name }}</p>
+	<p>Email: {{ users.email }}</p>
+	<p>Created at: {{ users.created_at }}</p>
+	<p>
+		<a href="/users/{{ users.id }}/edit">Edit</a> | <a href="/users/{{ users.id }}/destroy">Delete</a></p>
+</body>
+</html>

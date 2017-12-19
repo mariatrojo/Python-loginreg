@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Login & Reg | Home</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'loginreg/style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Success! Welcome, {{ user.first_name }}!</h1>
+		<p class="success">
+			{% if messages %}
+				{% for message in messages %}
+					<p>{{ message }}</p>
+				{% endfor %}
+			{% endif %}
+		</p>
+		<form action="logout" method="POST">
+			{% csrf_token %}
+			<input type='submit' value='Log out' class='button'>
+		</form>
+	</div>
+</body>
+</html>

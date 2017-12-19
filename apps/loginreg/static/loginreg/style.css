@@ -1,0 +1,45 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+.wrapper{
+	padding:50px;
+	width:600px;
+}
+h1{
+	margin-bottom:20px;
+}
+.register{
+	width:270px;
+	padding:15px;
+	margin-bottom:30px;
+	border:1px solid black;
+	text-align:right;
+	background:rgb(255, 228, 210);
+	display:inline-block;
+	vertical-align:top;
+}
+.flash{
+	display:inline-block;
+	vertical-align:top;
+	margin:15px 0px 0px 20px;
+	color:red;
+}
+.login{
+	width:270px;
+	padding:15px;
+	border:1px solid black;
+	text-align:right;
+	background:rgb(255, 228, 210);
+	display:inline-block;
+	vertical-align:top;
+}
+p{
+	padding:5px;
+}
+.button{
+	margin:10px 5px 0px 0px;
+}
+.success{
+	color:rgb(32, 189, 32);
+}

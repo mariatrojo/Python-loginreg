@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Edit Users</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'semi_restful/style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<h1>Edit user {{ users.id }}</h1>
+	<form action="update" method="post">
+		{% csrf_token %}
+		<p>First name:</p>
+		<p><input type="text" name="first_name"></p>
+		<p>Last name:</p>
+		<p><input type="text" name="last_name"></p>
+		<p>Email:</p>
+		<p><input type="text" name="email"></p>
+		<p><input type="submit" value="Update"></p>
+	</form>
+	<p><a href="/users/{{ users.id }}">Show</a> | <a href="/users">Go Back</a></p>
+	{% for message in messages %}
+	<p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+	{% endfor %}
+</body>
+</html>
